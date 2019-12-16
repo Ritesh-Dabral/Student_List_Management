@@ -1,13 +1,57 @@
-<?php 
-	//require_once('other/header.php'); //connecting with database
-	require_once('user.php'); //connecting with database
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STUDENT_MANAGEMENT</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+	<h1 class="text-center">STUDENT_MANAGEMENT</h1>
 	
-	setup_conn();
-	//$sql = "INSERT INTO student (first_name, last_name, class, stream) VALUES ('Ritesh','Dabral','12','Science')";
-	//$sql = "DELETE FROM student WHERE id=1";;
-	//delet($sql);
-	//insert($sql);
-	$sql = "SELECT first_name,last_name,class,stream FROM student";
-	show($sql);
+	<div align="center" class="mt-3"><a href="other/header.php"><button class="btn btn-success col-md-4 text-center">ADD</button></a></div><br>
+<div class="form-check mt-4" align="center">
+	<h1> LIST STUDENTS</h1>
+	<form action="other/show.php" method="post">
+	<div class="form-group">
+		<h4>Based on class: </h4>
+		<select class="form-control form-control-sm col-md-4 text-center" name="class" required>
+			<option value="ALL">ALL</option>
+			<option value="KG">KG</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select>
+	</div>
+		<br>
+		<h4>Based on stream: </h4>
+		<select class="form-control form-control-sm col-md-4 text-center" name="stream" required>
+			<option value="ALL">ALL</option>
+			<option value="SCIENCE">SCIENCE</option>
+			<option value="COMMERCE">COMMERCE</option>
+			<option value="ARTS">ARTS</option>
+			<option value="HUMANITIES">HUMANITIES</option>
+		</select>
+		<br>
+		<h4>Based on First name: </h4>
+			<input class="form-control col-md-4 text-center" type="text" name="first_name" value="none"><br>
+		<h4>Based on Last name: </h4>
+			<input class="form-control col-md-4 text-center" type="text" name="last_name" value="none"><br>
+			
+		<br><button class="btn btn-primary col-md-4" type="submit">SHOW</button>
+	</form>
+<div>
+	<script>
 	
-?>
+	
+	</script>
+</body>
+</html>
