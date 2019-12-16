@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>STUDENT_MANAGEMENT_LIST</title>
-	<link rel="text/stylesheet" href="css/bootstrap.min">
-</head>
-<body>
-<a href="../index.php"><button>EXIT</button></a><br>
 <?php
 
 	require_once('user.php');
@@ -71,9 +63,4 @@
 	}
 	else
 		die("<h4>No such record found</h4>");
-	
-
 ?>
-
-</body>
-</html>

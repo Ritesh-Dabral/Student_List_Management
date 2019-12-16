@@ -10,8 +10,8 @@
 	
 	<div align="center" class="mt-3"><a href="other/header.php"><button class="btn btn-success col-md-4 text-center">ADD</button></a></div><br>
 <div class="form-check mt-4" align="center">
-	<h1> LIST STUDENTS</h1>
-	<form action="other/show.php" method="post">
+	<h1>DATA MANIPULATION</h1>
+	<form action="other/show.php" method="post" id="myForm">
 	<div class="form-group">
 		<h4>Based on class: </h4>
 		<select class="form-control form-control-sm col-md-4 text-center" name="class" required>
@@ -46,11 +46,17 @@
 		<h4>Based on Last name: </h4>
 			<input class="form-control col-md-4 text-center" type="text" name="last_name" value="none"><br>
 			
-		<br><button class="btn btn-primary col-md-4" type="submit">SHOW</button>
+		<br><button class="btn btn-primary col-md-2" id="show" type="submit">SHOW</button><button class="btn btn-danger col-md-2 ml-4" id="del" type="submit">DELETE</button>
 	</form>
 <div>
 	<script>
-	
+	var actn = document.getElementById("myForm");
+	var del_btn= document.getElementById("del");	
+	del_btn.onclick = function()
+	{
+		alert('QUERY RUNNING');
+		actn.action="other/delete.php";
+	}
 	
 	</script>
 </body>
